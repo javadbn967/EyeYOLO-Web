@@ -16,7 +16,7 @@
             height: 100vh;
         }
         h1 {
-            margin: 20px 0;
+            margin: 10px 0;
             color: #fdfeff;
         }
         .container {
@@ -36,20 +36,22 @@
             border-radius: 5px;
         }
         .buttons {
-            margin-bottom: 20px;
+            margin-bottom: 0px;
         }
         input[type="file"], button {
             margin: 5px;
-            padding: 10px 20px;
-            font-size: 16px;
+            padding: 10px 10px;
+            font-size: 14px;
             background-color: #382a85;
             color: white;
             border: none;
             border-radius: 5px;
             cursor: pointer;
+            transition: transform 0.2s ease, background-color 0.2s ease;
         }
-        button:hover {
+        button:hover, input[type="file"]:hover {
             background-color: #4829b9;
+            transform: scale(1.1); 
         }
     </style>
 </head>
@@ -94,7 +96,7 @@
             const predictions = await net.detect(image);
 
             let yOffset = 0; 
-            const fontSize = 20; 
+            const fontSize = 40; 
 
             predictions.forEach(prediction => {
                 const [x, y, width, height] = prediction.bbox;
@@ -110,7 +112,7 @@
                     yOffset += fontSize + 5; 
                 }
 
-                ctx.font = `${fontSize}px Arial`;
+                ctx.font = `${fontSize}px Arial`; 
                 ctx.fillStyle = prediction.score > 0.7 ? '#2ecc71' : '#e74c3c';
                 ctx.fillText(
                     `${prediction.class} (${Math.round(prediction.score * 100)}%)`,
