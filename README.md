@@ -1,6 +1,8 @@
 # EyeYOLO-Web
 I wrote this website with html, css, Javascript. This website can identify objects in the photo you upload.
 
+<img src="demo.png" alt="EyeYOLO Demo" width="600"/>
+
 ## Description
 This model uses the TensorFlow.js library in Javascript to identify objects and write the percentage of correctness next to them. This library allows us to run AI models in the browser. TensorFlow works in such a way that it can perform an accurate analysis of objects using Deep Neural Networks. When we give it a photo, it can identify objects, write the percentage of accuracy next to them, and draw a line for them. Of course, this depends on the quality of the photo and how it is positioned. If it is correct, the result will be displayed clearly and correctly.CSS is used to make the buttons more beautiful.
 
