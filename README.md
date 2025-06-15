@@ -15,5 +15,5 @@ This model uses the TensorFlow.js library in Javascript to identify objects and 
 ### Simple example
 Let's say you have a picture of a room. The first model divides the image into small parts, then compares it to patterns it has learned (like the shape of a sofa), says "there's a sofa here with 81% confidence" and draws a box. This is done in a fraction of a second using JavaScript.
 
-This is the project link to view👉 https://eye-yolo-web-jtdp.vercel.app/
+🔗 [Live Demo](https://eye-yolo-web-jtdp.vercel.app)
 
