@@ -8,10 +8,12 @@ body {
     align-items: center;
     height: 100vh;
 }
+
 h1 {
     margin: 10px 0;
     color: #fdfeff;
 }
+
 .container {
     text-align: center;
     flex-grow: 1;
@@ -21,20 +23,23 @@ h1 {
     height: 100%;
     padding: 20px;
 }
+
 #canvas {
     max-width: 1000px;
-    width: 800px;
+    width: 80%; 
     height: auto;
     margin: 20px 0;
     border-radius: 5px;
 }
+
 .buttons {
     margin-bottom: 0px;
 }
+
 input[type="file"], button {
     margin: 5px;
-    padding: 10px 10px;
-    font-size: 14px;
+    padding: 12px 20px; 
+    font-size: 16px;
     background-color: #382a85;
     color: white;
     border: none;
@@ -42,7 +47,29 @@ input[type="file"], button {
     cursor: pointer;
     transition: transform 0.2s ease, background-color 0.2s ease;
 }
+
 button:hover, input[type="file"]:hover {
     background-color: #4829b9;
-    transform: scale(1.1); 
+    transform: scale(1.1);
+}
+
+
+@media (max-width: 768px) {
+    .container {
+        padding: 10px;
+    }
+
+    #canvas {
+        width: 90%; 
+    }
+
+    input[type="file"], button {
+        padding: 10px 15px; 
+        font-size: 14px;
+    }
+
+    .buttons {
+        flex-direction: column;
+        gap: 10px; 
+    }
 }
